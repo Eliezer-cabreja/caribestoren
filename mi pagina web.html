@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CaribeStoren.com</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('https://i.ibb.co/7b7D4qX/fondo.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+      text-align: center;
+    }
+
+    h1 {
+      color: rgb(235, 68, 7);
+      margin-top: 20px;
+      text-shadow: 2px 2px 5px black;
+    }
+
+    .button {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      background-color: rgb(235, 68, 7);
+      color: white;
+      font-weight: bold;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+
+    .button:hover {
+      background-color: rgb(255, 100, 50);
+      transform: scale(1.1);
+    }
+
+    .page {
+      display: none; 
+      padding: 20px;
+    }
+
+    .active {
+      display: block; 
+    }
+
+    .product {
+      display: inline-block;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      margin: 10px;
+      padding: 15px;
+      width: 200px;
+      vertical-align: top;
+      transition: 0.3s;
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .product:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 10px rgb(235, 68, 7);
+    }
+  </style>
+</head>
+<body>
+
+<h1>CARIBE STOREN</h1>
+
+<div>
+  <span class="button" onclick="showPage('inicio')">Inicio</span>
+  <span class="button" onclick="showPage('tienda')">Tienda</span>
+  <span class="button" onclick="showPage('contacto')">Contacto</span>
+</div>
+
+<div id="inicio" class="page active">
+  <h2>Bienvenido a Caribe Storen</h2>
+  <p>Bienvenido a CaribeStoren Puedes buscar uno de nuestros productos aver si te interesa.</p>
+  <body style="background-image: url('fondo.jfif'); 
+             background-size: cover; 
+             background-position: center; 
+             background-repeat: no-repeat;">
+</div>
+
+<div id="tienda" class="page">
+  <h2>Productos Disponibles</h2>
+  <div class="product">
+    <img src="producto.png" alt="Script 1">
+    <h3>Panel Login</h3>
+    <p>Precio: $5 USD</p>
+    <a href="https://www.ejemplo.com" class="button">Comprar</a>
+  </div>
+  <div class="product">
+    <img src="https://i.ibb.co/0nW6C0v/script2.png" alt="Script 2">
+    <h3>Script Avanzado</h3>
+    <p>Precio: $10 USD</p>
+    <a href="https://www.ejemplo.com" class="button">Comprar</a>
+  </div>
+  <div class="product">
+    <img src="https://i.ibb.co/0nW6C0v/script3.png" alt="Script 3">
+    <h3>Script Profesional</h3>
+    <p>Precio: $20 USD</p>
+    <a href="https://www.ejemplo.com" class="button">Comprar</a>
+  </div>
+</div>
+
+<div id="contacto" class="page">
+  <h2>Contacto</h2>
+  <p>Si tienes dudas o quieres soporte, contáctanos:</p>
+  <p>Email: <a href="mailto:soporte@caribestoren.com" style="color:rgb(235,68,7);">soporte@caribestoren.com</a></p>
+  <p>Telegram: <a href="https://t.me/tuusuario" style="color:rgb(235,68,7);">@tuusuario</a></p>
+    <p>Discord: <a href="https://discord.gg/eYEdTQ5N3c" style="color:rgb(235,68,7);">Discord Caribe Store</a></p>
+</div>
+
+<script>
+  function showPage(pageId) {
+    const pages = document.querySelectorAll('.page');
+    pages.forEach(page => page.classList.remove('active'));
+    document.getElementById(pageId).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
